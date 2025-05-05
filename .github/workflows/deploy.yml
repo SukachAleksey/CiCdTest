@@ -2,14 +2,14 @@ name: Deploy to github pages
 
 on:
   push:
-    brances:
+    branches:
       - main
 
-permisssions:
+permissions:
   contents: write
 
 jobs:
-  build and deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
