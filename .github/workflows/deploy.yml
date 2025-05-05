@@ -22,13 +22,13 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
-        run: npm install
+        run: cd CiCdtest && npm install
 
       - name: Build
-        run: npm run build
+        run: cd CiCdtest && npm run build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with: 
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+          publish_dir: ./CiCdtest/build
